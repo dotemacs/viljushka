@@ -15,7 +15,9 @@ $ gem install viljushka
 ```
 require 'viljushka'
 puts 'ćirilica'.to_cyr
+puts 'ćirilica'.po_vuku
 puts 'латиница'.to_lat
+puts 'латиница'.po_gaju
 ```
 
 ### Note

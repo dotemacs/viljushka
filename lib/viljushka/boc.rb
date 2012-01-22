@@ -11,18 +11,22 @@ module Viljushka
     def to_cyr
       convert(self.dup, Latin, Cyrillic)
     end
+    alias_method :po_vuku, :to_cyr
 
     def to_cyr!
       convert(self, Latin, Cyrillic)
     end
+    alias_method :po_vuku!, :to_cyr!
 
     def to_lat
       convert(self.dup, Cyrillic, Latin)
     end
+    alias_method :po_gaju, :to_lat
 
     def to_lat!
       convert(self, Cyrillic, Latin)
     end
+    alias_method :po_gaju!, :to_lat!
 
     private
     def convert(text, from, to)
