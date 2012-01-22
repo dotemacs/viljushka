@@ -1,2 +1,2 @@
 require 'rspec'
-require 'cyrillizer'
+require 'viljushka'

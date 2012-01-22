@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe "Convertor" do
+describe "Viljushka::Boc" do
 
   it "should change original string when using to_cyr!" do
     string = 'Milisav'
