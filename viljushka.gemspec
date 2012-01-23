@@ -2,14 +2,14 @@
 
 Gem::Specification.new do |s|
   s.name = "viljushka"
-  s.version = "0.1.2"
+  s.version = "0.1.3"
   s.homepage = "http://github.com/dotemacs/viljushka"
   s.authors = ["Aleksandar Simić"]
   s.date = "2012-01-22"
   s.summary = "Character set conversion for Serbian"
   s.description = "Character conversion from Latin alphabet to Serbian Cyrillic script and vice versa"
   s.email = "asimic@gmail.com"
-  s.require_paths = "lib"
+  s.require_paths = ["lib"]
   s.files      = `git ls-files`.split("\n")
   s.test_files = `git ls-files -- {spec,features}/*`.split("\n")
 
