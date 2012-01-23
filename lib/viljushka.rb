@@ -4,5 +4,5 @@ $:.unshift(File.dirname(__FILE__)) unless
 require 'viljushka/boc'
 
 module Viljushka
-  VERSION = '0.1.4'
+  VERSION = '0.1.5'
 end

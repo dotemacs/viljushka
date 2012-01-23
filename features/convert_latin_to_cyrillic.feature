@@ -22,6 +22,7 @@ Feature: Convert Latin To Cyrilic
             | ð     | ђ        |
             | đ     | ђ        |
             | Ð     | Ђ        |
+            | Đ     | Ђ        |
             | dj    | ђ        |
             | Dj    | Ђ        |
             | DJ    | Ђ        |

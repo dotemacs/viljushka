@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "viljushka"
-  s.version = "0.1.4"
+  s.version = "0.1.5"
   s.homepage = "http://github.com/dotemacs/viljushka"
   s.authors = ["Aleksandar Simić"]
   s.date = "2012-01-22"
