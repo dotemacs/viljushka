@@ -5,8 +5,8 @@ module Viljushka
     # Including officially 'non valid' (read: used on the internet, by
     # people who can't be bothered to set up their keyboard layouts)
     # Serbian Latin characters as well as the official letters
-    Latin    = %w(DJ Dj dj DZ Dz dz DŽ Dž dž ZH Zh zh LJ Lj lj NJ Nj nj CH Ch ch SH Sh sh A a B b V v G g D d Ð ð E e Ž ž Z z I i J j K k L l M m N n O o P p R r S s T t Ć ć U u F f H h C c Č č Š š)
-    Cyrillic = %w(Ђ Ђ ђ Џ Џ џ Џ Џ џ Ж Ж ж Љ Љ љ Њ Њ њ Ч Ч ч Ш Ш ш А а Б б В в Г г Д д Ђ ђ Е е Ж ж З з И и Ј ј К к Л л М м Н н О о П п Р р С с Т т Ћ ћ У у Ф ф Х х Ц ц Ч ч Ш ш)
+    Latin    = %w(DJ Dj dj DZ Dz dz DŽ Dž dž ZH Zh zh LJ Lj lj NJ Nj nj CH Ch ch SH Sh sh A a B b V v G g D d Ð đ ð E e Ž ž Z z I i J j K k L l M m N n O o P p R r S s T t Ć ć U u F f H h C c Č č Š š)
+    Cyrillic = %w(Ђ Ђ ђ Џ Џ џ Џ Џ џ Ж Ж ж Љ Љ љ Њ Њ њ Ч Ч ч Ш Ш ш А а Б б В в Г г Д д Ђ ђ ђ Е е Ж ж З з И и Ј ј К к Л л М м Н н О о П п Р р С с Т т Ћ ћ У у Ф ф Х х Ц ц Ч ч Ш ш)
 
     def to_cyr
       convert(self.dup, Latin, Cyrillic)
