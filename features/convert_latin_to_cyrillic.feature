@@ -72,20 +72,11 @@ Feature: Convert Latin To Cyrilic
             | C     | Ц        |
             | č     | ч        |
             | Č     | Ч        |
-            | ch    | ч        |
-            | CH    | Ч        |
-            | Ch    | Ч        |
-            | dz    | џ        |
-            | DZ    | Џ        |
-            | Dz    | Џ        |
             | dž    | џ        |
             | DŽ    | Џ        |
             | Dž    | Џ        |
             | š     | ш        |
             | Š     | Ш        |
-            | sh    | ш        |
-            | SH    | Ш        |
-            | Sh    | Ш        |
 
     Scenario Outline: User writes sentences in Latin characters
         When user writes <Latin> text
@@ -94,6 +85,5 @@ Feature: Convert Latin To Cyrilic
         Examples:
             | Latin          | Cyrillic      |
             | abeceda        | абецеда       |
-            | Cela rechenica | Цела реченица |
             | Cela rečenica  | Цела реченица |
             | Džečćž         | Џечћж         |

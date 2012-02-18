@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
 
+$LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
+
+require 'viljushka/version'
+
 Gem::Specification.new do |s|
   s.name = "viljushka"
-  s.version = "0.1.5"
+  s.version = Viljushka::VERSION
   s.homepage = "http://github.com/dotemacs/viljushka"
   s.authors = ["Aleksandar Simić"]
   s.date = "2012-01-22"
@@ -13,8 +17,7 @@ Gem::Specification.new do |s|
   s.files      = `git ls-files`.split("\n")
   s.test_files = `git ls-files -- {spec,features}/*`.split("\n")
 
-  s.required_ruby_version = '>= 1.9.2'
-  s.required_rubygems_version = '>= 1.8.10'
+  s.required_rubygems_version = '>= 1.3.6'
 
   {
     'rspec'    => '>= 2.0.0',

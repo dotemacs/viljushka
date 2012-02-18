@@ -66,7 +66,7 @@ describe "Viljushka::Boc" do
   end
 
   it "should convert Serbian characters" do
-    "chicha".to_cyr.should == 'чича'
+    "čiča".to_cyr.should == 'чича'
   end
 
 end
