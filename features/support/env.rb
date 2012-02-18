@@ -1,4 +1,5 @@
-require File.dirname(__FILE__) + "/../../lib/viljushka"
+$LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
 
 require 'cucumber'
 require 'rspec'
+require 'viljushka'
