@@ -3,8 +3,8 @@
 Character conversion from Latin alphabet to Serbian Cyrillic script
 and vice versa
 
-It adds **downcase** & **downcase** methods that understand Serbian
-Cyrillic case
+It adds **downcase** & **upcase** methods that understand Serbian
+Cyrillic & Latin case
 
 
 ### Install
