@@ -1,4 +1,4 @@
-When /^I enter a (.*) character$/ do |char|
+When /^I provide a (.*) character$/ do |char|
   @char = char
 end
 

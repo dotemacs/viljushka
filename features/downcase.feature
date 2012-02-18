@@ -2,7 +2,7 @@ Feature: Convert from uppercase To lowercase
     In order to convert text from uppercase to lowercase
 
     Scenario Outline: User enters Latin characters
-        When I enter a <Uppercase> character
+        When I provide a <Uppercase> character
         Then I should get it in <Lowercase>
 
         Examples:

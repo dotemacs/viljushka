@@ -1,2 +1,2 @@
 require 'viljushka/boc'
-require 'viljushka/downcase'
+require 'viljushka/case_conversion'
