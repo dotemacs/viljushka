@@ -4,30 +4,34 @@ require 'spec_helper'
 
 describe "Viljushka::Boc" do
 
-  it "should change original string when using to_cyr!" do
-    string = 'Milisav'
-    string.to_cyr!.should == 'Милисав'
-    string.should == 'Милисав'
+  context "#to_cyr!" do
+    it "should change the original string" do
+      string = 'Milisav'
+      string.to_cyr!.should == 'Милисав'
+      string.should == 'Милисав'
+    end
   end
 
 
-  it "should not change original string when using to_cyr" do
-    string = 'Darinka'
-    string.to_cyr.should == 'Даринка'
-    string.should == 'Darinka'
+  context "#to_cyr" do
+    it "should not change the original string" do
+      string = 'Darinka'
+      string.to_cyr.should == 'Даринка'
+      string.should == 'Darinka'
+    end
   end
 
   context "Вук Караџић" do
-    context "when using 'po_vuku!'" do
-      it "should change original string" do
+    context "when using #po_vuku!" do
+      it "should change the original string" do
         string = 'Debelo jer'
         string.to_cyr!.should == 'Дебело јер'
         string.should == 'Дебело јер'
       end
     end
 
-    context "when using 'po_vuku'" do
-      it "should not change original string" do
+    context "when using #po_vuku" do
+      it "should not change the original string" do
         string = 'Debelo jer'
         string.to_cyr.should == 'Дебело јер'
         string.should == 'Debelo jer'
@@ -35,29 +39,33 @@ describe "Viljushka::Boc" do
     end
   end
 
-  it "should change original string when using to_lat!" do
-    string = 'Руменка'
-    string.to_lat!.should == 'Rumenka'
-    string.should == 'Rumenka'
+  context "#to_lat!" do
+    it "should change the original string" do
+      string = 'Руменка'
+      string.to_lat!.should == 'Rumenka'
+      string.should == 'Rumenka'
+    end
   end
 
-  it "should not change original string when using to_lat" do
-    string = 'Изворка'
-    string.to_lat.should == 'Izvorka'
-    string.should == 'Изворка'
+  context "#to_lat" do
+    it "should not change the original string" do
+      string = 'Изворка'
+      string.to_lat.should == 'Izvorka'
+      string.should == 'Изворка'
+    end
   end
 
   context "Ljudevit Gaj" do
-    context "when using 'po_gaju!'" do
-      it "should change original string" do
+    context "#po_gaju!" do
+      it "should change the original string" do
         string = 'дивно'
         string.po_gaju!.should == 'divno'
         string.should == 'divno'
       end
     end
 
-    context "when using 'po_gaju'" do
-      it "should not change original string" do
+    context "#po_gaju" do
+      it "should not change the original string" do
         string = 'дивно'
         string.po_gaju.should == 'divno'
         string.should == 'дивно'
