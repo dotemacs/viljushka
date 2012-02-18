@@ -9,7 +9,6 @@ Gem::Specification.new do |s|
   s.version = Viljushka::VERSION
   s.homepage = "http://github.com/dotemacs/viljushka"
   s.authors = ["Aleksandar Simić"]
-  s.date = "2012-01-22"
   s.summary = "Character set conversion for Serbian"
   s.description = "Character conversion from Latin alphabet to Serbian Cyrillic script and vice versa"
   s.email = "asimic@gmail.com"
