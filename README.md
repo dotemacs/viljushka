@@ -3,8 +3,8 @@
 Character conversion from Latin alphabet to Serbian Cyrillic script
 and vice versa
 
-It adds **downcase** & **upcase** methods that understand Serbian
-Cyrillic & Latin case
+It adds **downcase**, **upcase** & **capitalize** methods that
+understand Serbian Cyrillic & Latin case
 
 
 ### Install
@@ -22,6 +22,8 @@ require 'viljushka'
 "САРМА"
 > "САРМА".downcase.po_gaju # or .to_lat
 "sarma"
+> "жирафа".capitalize
+"Жирафа"
 ```
 
 ### Note
