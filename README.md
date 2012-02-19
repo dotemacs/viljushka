@@ -1,11 +1,11 @@
 ### Description
 
-Character conversion from Latin alphabet to Serbian Cyrillic script
-and vice versa
+Character conversion to and from and String operations for Latin
+alphabet and Serbian Cyrillic script.
 
-It adds **downcase**, **upcase** & **capitalize** methods that
-understand Serbian Cyrillic & Latin case
-
+Methods **#downcase**, **#upcase** & **#capitalize** are Serbian
+Cyrillic & Latin case compatible as well as maintaining their previous
+functionality on A-Z ASCII character set.
 
 ### Install
 
