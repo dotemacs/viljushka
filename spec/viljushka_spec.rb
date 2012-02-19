@@ -77,6 +77,31 @@ describe "Viljushka::Boc" do
     "čiča".to_cyr.should == 'чича'
   end
 
+  context "#upcase" do
+    context "with alphabet" do
+      subject { "abcdefghijklmnopqrstuvwxyz".upcase }
+      it { should eql "ABCDEFGHIJKLMNOPQRSTUVWXYZ" }
+    end
+
+    context "with Serbian Cyrillic" do
+      subject { "абвгдђежзијклљмнњопрстћуфхцчџш".upcase }
+      it { should eql "АБВГДЂЕЖЗИЈКЛЉМНЊОПРСТЋУФХЦЧЏШ" }
+    end
+  end
+
+  describe "#downcase" do
+    context "with alphabet" do
+      subject { "ABCDEFGHIJKLMNOPQRSTUVWXYZ".downcase }
+      it { should eql "abcdefghijklmnopqrstuvwxyz" }
+    end
+
+    context "with Serbian Cyrillic" do
+      subject { "АБВГДЂЕЖЗИЈКЛЉМНЊОПРСТЋУФХЦЧЏШ".downcase }
+      it { should eql "абвгдђежзијклљмнњопрстћуфхцчџш" }
+    end
+  end
+
+
   context "#capitalize" do
     it "should capitalize Cyrillic" do
       "чича".capitalize.should == "Чича"
