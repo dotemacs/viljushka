@@ -3,9 +3,10 @@
 Character conversion to and from and String operations for Latin
 alphabet and Serbian Cyrillic script.
 
-Methods **#downcase**, **#upcase** & **#capitalize** are Serbian
-Cyrillic & Latin case compatible as well as maintaining their previous
-functionality on A-Z ASCII character set.
+Methods **#downcase**, **#downcase!**, **#upcase**, **#upcase!** &
+**#capitalize** are Serbian Cyrillic & Latin case compatible as well
+as maintaining their previous functionality on A-Z ASCII character
+set.
 
 ### Install
 

@@ -89,6 +89,24 @@ describe "Viljushka::Boc" do
     end
   end
 
+  describe "#upcase!" do
+    context "with alphabet" do
+      it "should modify the string permanently" do
+        string = "abcdefghijklmnopqrstuvwxyz"
+        string.upcase!.should == "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        string.should == "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      end
+    end
+
+    context "with Serbian Cyrillic" do
+      it "should modify the string permanently" do
+        cyr = "абвгдђежзијклљмнњопрстћуфхцчџш"
+        cyr.upcase!.should == "АБВГДЂЕЖЗИЈКЛЉМНЊОПРСТЋУФХЦЧЏШ"
+        cyr.should == "АБВГДЂЕЖЗИЈКЛЉМНЊОПРСТЋУФХЦЧЏШ"
+      end
+    end
+  end
+
   describe "#downcase" do
     context "with alphabet" do
       subject { "ABCDEFGHIJKLMNOPQRSTUVWXYZ".downcase }
@@ -98,6 +116,25 @@ describe "Viljushka::Boc" do
     context "with Serbian Cyrillic" do
       subject { "АБВГДЂЕЖЗИЈКЛЉМНЊОПРСТЋУФХЦЧЏШ".downcase }
       it { should eql "абвгдђежзијклљмнњопрстћуфхцчџш" }
+    end
+  end
+
+
+  describe "#downcase!" do
+    context "with alphabet" do
+      it "should modify the string permanently" do
+        string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        string.downcase!.should == "abcdefghijklmnopqrstuvwxyz"
+        string.should == "abcdefghijklmnopqrstuvwxyz"
+      end
+    end
+
+    context "with Serbian Cyrillic" do
+      it "should modify the string permanently" do
+        cyr = "АБВГДЂЕЖЗИЈКЛЉМНЊОПРСТЋУФХЦЧЏШ"
+        cyr.downcase!.should == "абвгдђежзијклљмнњопрстћуфхцчџш"
+        cyr.should == "абвгдђежзијклљмнњопрстћуфхцчџш"
+      end
     end
   end
 

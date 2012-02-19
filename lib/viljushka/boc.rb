@@ -19,8 +19,12 @@ module Viljushka
         convert(self, Cyrillic, Latin)
       elsif arg.to_s =~ /^downcase$/
         convert(self.dup, Up, Low)
+      elsif arg.to_s =~ /^downcase!$/
+        convert(self, Up, Low)
       elsif arg.to_s =~ /^upcase$/
         convert(self.dup, Low, Up)
+      elsif arg.to_s =~ /^upcase!$/
+        convert(self, Low, Up)
       elsif arg.to_s =~ /^capitalize$/
         arr = self.scan(/./)
         convert(arr.shift, Low, Up) + convert(arr.join, Up, Low)
@@ -44,7 +48,9 @@ end
 
 class String
   remove_method(:downcase)
+  remove_method(:downcase!)
   remove_method(:upcase)
+  remove_method(:upcase!)
   remove_method(:capitalize)
   include Viljushka::Boc
 end
