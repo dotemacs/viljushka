@@ -7,6 +7,14 @@ Feature: Convert from uppercase To lowercase
 
         Examples:
             | Uppercase | Lowercase |
+            | DJ        | dj        |
+            | Dj        | dj        |
+            | DŽ        | dž        |
+            | LJ        | lj        |
+            | Lj        | lj        |
+            | Ć         | ć         |
+            | Č         | č         |
+            | Š         | š         |
             | А         | а         |
             | Б         | б         |
             | В         | в         |
