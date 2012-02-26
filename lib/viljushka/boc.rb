@@ -8,29 +8,49 @@ module Viljushka
     Up  = %w(Dž Ž Ć Č Š Đ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z А Б В Г Д Ђ Е Ж З И Ј К Л М Н Љ Њ О П Р С Т Ћ У Ф Х Ц Ч Џ Ш)
     Low = %w(dž ž ć č š đ a b c d e f g h i j k l m n o p q r s t u v w x y z а б в г д ђ е ж з и ј к л м н љ њ о п р с т ћ у ф х ц ч џ ш)
 
-    def method_missing(arg)
-      if arg.to_s =~ /^(to_cyr|po_vuku)$/
-        convert(self.dup, Latin, Cyrillic)
-      elsif arg.to_s =~ /^(to_cyr|po_vuku)!$/
-        convert(self, Latin, Cyrillic)
-      elsif arg.to_s =~ /^(to_lat|po_gaju)$/
-        convert(self.dup, Cyrillic, Latin)
-      elsif arg.to_s =~ /^(to_lat|po_gaju)!$/
-        convert(self, Cyrillic, Latin)
-      elsif arg.to_s =~ /^downcase$/
-        convert(self.dup, Up, Low)
-      elsif arg.to_s =~ /^downcase!$/
-        convert(self, Up, Low)
-      elsif arg.to_s =~ /^upcase$/
-        convert(self.dup, Low, Up)
-      elsif arg.to_s =~ /^upcase!$/
-        convert(self, Low, Up)
-      elsif arg.to_s =~ /^capitalize$/
-        arr = self.scan(/./)
-        convert(arr.shift, Low, Up) + convert(arr.join, Up, Low)
-      else
-        super
-      end
+    def to_cyr
+      convert(self.dup, Latin, Cyrillic)
+    end
+
+    alias_method :po_vuku, :to_cyr
+
+    def to_cyr!
+      convert(self, Latin, Cyrillic)
+    end
+
+    alias_method :po_vuku!, :to_cyr!
+
+    def to_lat
+      convert(self.dup, Cyrillic, Latin)
+    end
+
+    alias_method :po_gaju, :to_lat
+
+    def to_lat!
+      convert(self, Cyrillic, Latin)
+    end
+
+    alias_method :po_gaju!, :to_lat!
+
+    def downcase
+      convert(self.dup, Up, Low)
+    end
+
+    def downcase!
+      convert(self, Up, Low)
+    end
+
+    def upcase
+      convert(self.dup, Low, Up)
+    end
+
+    def upcase!
+      convert(self, Low, Up)
+    end
+
+    def capitalize
+      arr = self.scan(/./)
+      convert(arr.shift, Low, Up) + convert(arr.join, Up, Low)
     end
 
     private
