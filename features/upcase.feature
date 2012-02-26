@@ -11,6 +11,7 @@ Feature: Convert from uppercase To lowercase
             | dž        | DŽ        |
             | lj        | LJ        |
             | nj        | NJ        |
+            | đ         | Đ         |
             | ž         | Ž         |
             | ć         | Ć         |
             | č         | Č         |

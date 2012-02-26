@@ -15,6 +15,7 @@ Feature: Convert from uppercase To lowercase
             | Ć         | ć         |
             | Č         | č         |
             | Š         | š         |
+            | Đ         | đ         |
             | А         | а         |
             | Б         | б         |
             | В         | в         |
